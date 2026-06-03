@@ -1,3 +1,4 @@
+// src/app/[lang]/page.tsx
 import Hero from '../../components/Hero';
 import Services from '../../components/Services';
 import AboutDoctor from '../../components/AboutDoctor';
@@ -139,7 +140,6 @@ export default async function Home({
           'Friday: Closed'
         ],
     cta: lang === 'ar' ? 'ذهاب للموقع' : 'Go to Location',
-    // UPDATED: Using the official Google Maps embed URL extracted from the iframe
     mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3206.653230200339!2d40.760752!3d36.51423200000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzbCsDMwJzUxLjIiTiA0MMKwNDUnMzguNyJF!5e0!3m2!1sen!2s!4v1779380575942!5m2!1sen!2s',
     mapLink: 'https://maps.app.goo.gl/XB6n8gB9M3wZkuUu6',
   };
@@ -176,9 +176,7 @@ export default async function Home({
       <Hero lang={lang} dictionary={heroDictionary} />
       <Services lang={lang} dictionary={servicesDictionary} />
       <AboutDoctor dict={aboutDoctorDictionary} /> 
-      
       <FAQ dict={faqDictionary} />
-      
       <Contact dict={contactDictionary} />
       <Footer dict={footerDictionary} lang={lang} />
     </main>
